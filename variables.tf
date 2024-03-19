@@ -6,19 +6,19 @@ variable "region" {
 variable "access_key" {
   description = "Aws access key"
   type        = string
-  sensitive = true
+  sensitive   = true
 }
 
 variable "secret_key" {
   description = "Aws secret key"
   type        = string
-  sensitive =  true
+  sensitive   = true
 }
 
 variable "token" {
   description = "Aws secret key"
   type        = string
-  sensitive = true
+  sensitive   = true
 }
 
 
