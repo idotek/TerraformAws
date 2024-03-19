@@ -26,7 +26,7 @@ resource "aws_vpc" "TF-VPC" {
 resource "aws_subnet" "AZ-A" {
     vpc_id = aws_vpc.TF-VPC.id
     cidr_block = "10.10.1.0/24"
-  
+    availability_zone = "us-east-1a"
     tags = {
         Name = "AZ-A"
     }
@@ -35,7 +35,7 @@ resource "aws_subnet" "AZ-A" {
 resource "aws_subnet" "AZ-B" {
     vpc_id = aws_vpc.TF-VPC.id
     cidr_block = "10.10.2.0/24"
-  
+    availability_zone = "us-east-1b"
     tags = {
         Name = "AZ-B"
     }
@@ -44,7 +44,7 @@ resource "aws_subnet" "AZ-B" {
 resource "aws_subnet" "AZ-C" {
     vpc_id = aws_vpc.TF-VPC.id
     cidr_block = "10.10.3.0/24"
-  
+    availability_zone = "us-east-1c"
     tags = {
         Name = "AZ-C"
     }
@@ -53,8 +53,10 @@ resource "aws_subnet" "AZ-C" {
 resource "aws_subnet" "AZ-Admin" {
     vpc_id = aws_vpc.TF-VPC.id
     cidr_block = "10.10.0.0/24"
-  
+    availability_zone = "us-east-1d"
     tags = {
         Name = "AZ-Admin"
     }
 }
+
+
