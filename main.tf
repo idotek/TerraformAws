@@ -1,3 +1,3 @@
 module "lb-project" {
-    source = "./resources"
+  source = "./resources"
 }

@@ -14,7 +14,7 @@ resource "aws_instance" "AC-A" {
   ami                    = "ami-080e1f13689e07408"
   subnet_id              = aws_subnet.AZ-A.id
   vpc_security_group_ids = [aws_security_group.WebNSG.id]
-  key_name               = "Terraform_Cle_Admin"
+  key_name               = "Terraform_Cle_Web"
   tags = {
     Name = "AC-A"
   }
@@ -25,7 +25,7 @@ resource "aws_instance" "AC-B" {
   ami                    = "ami-080e1f13689e07408"
   subnet_id              = aws_subnet.AZ-B.id
   vpc_security_group_ids = [aws_security_group.WebNSG.id]
-  key_name               = "Terraform_Cle_Admin"
+  key_name               = "Terraform_Cle_Web"
   tags = {
     Name = "AC-B"
   }
@@ -36,7 +36,7 @@ resource "aws_instance" "AC-C" {
   ami                    = "ami-080e1f13689e07408"
   subnet_id              = aws_subnet.AZ-C.id
   vpc_security_group_ids = [aws_security_group.WebNSG.id]
-  key_name               = "Terraform_Cle_Admin"
+  key_name               = "Terraform_Cle_Web"
   tags = {
     Name = "AC-C"
   }

@@ -1,0 +1,8 @@
+---
+
+- name: install apache2 using ssh on Web1
+  shell: ssh ubuntu@{{ web1 }} -i Terrafom_Cle_Web.pem sudo apt install apache2 -y
+- name: install apache2 using ssh on Web2
+  shell: ssh ubuntu@{{ web2 }} -i Terrafom_Cle_Web.pem sudo apt install apache2 -y
+- name: install apache2 using ssh on Web3
+  shell: ssh ubuntu@{{ web3 }} -i Terrafom_Cle_Web.pem sudo apt install apache2 -y

@@ -1,0 +1,7 @@
+---
+
+- name: copy web srv key on admin
+  copy:
+    src: Terrafom_Cle_Web.pem
+    dest: ~
+    remote_src: yes

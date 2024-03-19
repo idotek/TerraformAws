@@ -1,7 +1,7 @@
 resource "aws_elb" "TF-LB" {
   name    = "TF-LB"
   subnets = [aws_subnet.AZ-A.id, aws_subnet.AZ-B.id, aws_subnet.AZ-C.id]
-
+  security_groups = [aws_security_group.LbNSG.id]
   listener {
     instance_port     = 80
     instance_protocol = "http"

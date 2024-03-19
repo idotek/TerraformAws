@@ -1,0 +1,7 @@
+- hosts: adminserver
+  roles:
+    - copy_ssh_key
+    - apache2
+  remote_user: ubuntu
+  vars_files:
+    - var.yaml
