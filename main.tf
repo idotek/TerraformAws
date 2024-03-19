@@ -71,3 +71,17 @@ resource "aws_internet_gateway" "gw" {
   }
 }
 
+resource "aws_route_table" "TF-Route" {
+  vpc_id = aws_vpc.TF-VPC.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.gw.id
+  }
+  
+  route {
+    cidr_block = "10.10.0.0/16"
+    gateway_id = "local"
+  }
+
+}
