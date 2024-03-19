@@ -17,8 +17,9 @@ web3: ${aws_instance.AC-C.private_ip}
 EOF
 }
 
-resource "ansible_playbook" "playbook" {
-  playbook   = "external/ansible/playbook.yml"
-  name       = "Setup system"
-  replayable = true
+resource "null_resource" "AnsiblelaybookExec" {
+  provisioner "local-exec" {
+  command = "ansible-playbook -i external/ansible/hosts external/ansible/playbook.yml"
+  }
 }
+
