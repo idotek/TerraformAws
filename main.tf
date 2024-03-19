@@ -83,5 +83,12 @@ resource "aws_route_table" "TF-Route" {
     cidr_block = "10.10.0.0/16"
     gateway_id = "local"
   }
+  tags = {
+    Name = "TF-Routing"
+  }
+}
 
+resource "aws_main_route_table_association" "a" {
+  vpc_id         = aws_vpc.TF-VPC.id
+  route_table_id = aws_route_table.TF-Route.id
 }
